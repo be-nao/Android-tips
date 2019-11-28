@@ -23,14 +23,14 @@ class IconSpannable(private val targetTextView: TextView) {
     }
 
     private fun insertImage(
-        @DrawableRes prefixDrawableRes: Int,
+        @DrawableRes drawableRes: Int,
         resultString: SpannableString,
         startSpan: Int,
         endSpan: Int
     ): SpannableString {
         val context = targetTextView.context
         val size = (targetTextView.paint.descent() - targetTextView.paint.ascent()).toInt()
-        val drawable = context.resources.getDrawable(prefixDrawableRes, null)
+        val drawable = context.resources.getDrawable(drawableRes, null)
         drawable?.let {
             it.setBounds(0, 0, size, size)
             val span = CenteredImageSpan(it)
