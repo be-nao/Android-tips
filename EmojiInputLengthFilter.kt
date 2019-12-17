@@ -1,4 +1,4 @@
-// 絵文字込みでの文字列の長さ
+// 絵文字込みでの文字列の長さのフィルタリング
 
 import android.text.InputFilter
 import android.text.Spanned
